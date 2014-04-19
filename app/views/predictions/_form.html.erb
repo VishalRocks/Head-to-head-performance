@@ -11,18 +11,18 @@
     </div>
   <% end %>
 
-  <div align="center" class="field">
+  <div style="margin-left: 30%;" class="field">
     <%= f.text_field :rating1, :placeholder => "Rating" %>
-	<p style="display: inline;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+    <p style="display: inline; margin-left: 12%">&nbsp;</p>
     <%= f.text_field :rating2, :placeholder => "Rating" %>
   </div>
-  <div align="center" class="field">
+  <div style="margin-left: 30%;" class="field">
     <%= f.text_field :volatility1,:placeholder => "Volatility" %>
-    <p style="display: inline;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+    <p style="display: inline; margin-left: 12%">&nbsp;</p>
     <%= f.text_field :volatility2,:placeholder => "Volatility" %>
   </div>
   <div align="center" class="actions">
-    <%= f.submit "Go", :class => "btn btn-custom-spin" %>
+    <%= f.submit "Go",:class => "btn btn-custom-spin" %>
   </div>
 
 <% end %>

@@ -24,7 +24,7 @@ class PredictionsController < ApplicationController
 		@i=@i+1
 	end
 	@percent1=(@count)/100
-	@percent2=100.0-@percent1
+	@percent2=100-@percent1
   end
 
   # GET /predictions/new

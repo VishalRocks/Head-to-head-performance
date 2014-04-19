@@ -13,14 +13,16 @@
 
   <div align="center" class="field">
     <%= f.text_field :rating1, :placeholder => "Rating" %>
-    <%= f.text_field :rating2 , :placeholder => "Rating" %>
+	<p style="display: inline;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+    <%= f.text_field :rating2, :placeholder => "Rating" %>
   </div>
   <div align="center" class="field">
-    <%= f.text_field :volatility1, :placeholder => "Volatility" %>
-    <%= f.text_field :volatility2, :placeholder => "Volatility" %>
+    <%= f.text_field :volatility1,:placeholder => "Volatility" %>
+    <p style="display: inline;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+    <%= f.text_field :volatility2,:placeholder => "Volatility" %>
   </div>
   <div align="center" class="actions">
-    <%= f.submit nil, :type => :image, :src => "/assets/images/gobutton.png" %>
+    <%= f.submit "Go", :class => "btn btn-custom-spin" %>
   </div>
 
 <% end %>

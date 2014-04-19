@@ -1,0 +1,26 @@
+<%= form_for(@prediction) do |f| %>
+  <% if @prediction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prediction.errors.count, "error") %> prohibited this prediction from being saved:</h2>
+
+      <ul>
+      <% @prediction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div align="center" class="field">
+    <%= f.text_field :rating1, :placeholder => "Rating" %>
+    <%= f.text_field :rating2 , :placeholder => "Rating" %>
+  </div>
+  <div align="center" class="field">
+    <%= f.text_field :volatility1, :placeholder => "Volatility" %>
+    <%= f.text_field :volatility2, :placeholder => "Volatility" %>
+  </div>
+  <div align="center" class="actions">
+    <%= f.submit nil, :type => :image, :src => "/assets/images/gobutton.png" %>
+  </div>
+
+<% end %>

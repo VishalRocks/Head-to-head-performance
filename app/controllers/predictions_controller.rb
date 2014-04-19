@@ -10,21 +10,22 @@ class PredictionsController < ApplicationController
   # GET /predictions/1
   # GET /predictions/1.json
   def show
-	@count=0
-	@i=0
-	require 'distribution'
+	@count=0    		    # to count the favourable outcomes
+	@i=0        		    # initialising a counter
+	require 'distribution'      # using the gem
 	@normal1 = Distribution::Normal.rng(@prediction.rating1.to_f,@prediction.volatility1.to_f)
 	@normal2 = Distribution::Normal.rng(@prediction.rating2.to_f,@prediction.volatility2.to_f)
+	# creating two arrays with the normally distributed values for respective players with mean as rating and standard devaition as volatility
 	@norm1_distribution = 10_000.times.map {@normal1.call.to_f}	
 	@norm2_distribution = 10_000.times.map {@normal2.call.to_f}
 	while @i<10000 do
 		if @norm1_distribution[@i]>@norm2_distribution[@i]
-			@count=@count+1
+			@count=@count+1					#incrementing favourable outcomes
 		end
 		@i=@i+1
 	end
-	@percent1=(@count)/100
-	@percent2=100-@percent1
+	@percent1=(@count)/100           # % for 1st player
+	@percent2=100-@percent1          # % for 2nd player
   end
 
   # GET /predictions/new

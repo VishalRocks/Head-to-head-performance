@@ -22,7 +22,7 @@
     <%= f.text_field :volatility2,:placeholder => "Volatility" %>
   </div>
   <div align="center" class="actions">
-    <%= f.submit "Go",:class => "btn btn-custom-spin" %>
+    <%= f.submit "Go",:class => "btn btn-custom-spin",:data => { disable_with: "Processing..."} %>
   </div>
 
 <% end %>

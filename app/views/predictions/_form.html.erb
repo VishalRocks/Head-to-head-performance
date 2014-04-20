@@ -12,14 +12,14 @@
   <% end %>
 
   <div style="margin-left: 30%;" class="field">
-    <%= f.text_field :rating1, :placeholder => "Rating" %>
-    <p style="display: inline; margin-left: 12%">&nbsp;</p>
+    <%= f.text_field :rating1, :placeholder => "Rating" ,:cols => "30", :rows => "100"%>
+    <p style="display: inline; margin-left: 12%"></p>
     <%= f.text_field :rating2, :placeholder => "Rating" %>
   </div>
   <div style="margin-left: 30%;" class="field">
-    <%= f.text_field :volatility1,:placeholder => "Volatility" %>
-    <p style="display: inline; margin-left: 12%">&nbsp;</p>
-    <%= f.text_field :volatility2,:placeholder => "Volatility" %>
+    <%= f.text_field :volatility1, :placeholder => "Volatility" %>
+    <p style="display: inline; margin-left: 12%"></p>
+    <%= f.text_field :volatility2, :placeholder => "Volatility" %>
   </div>
   <div align="center" class="actions">
     <%= f.submit "Go",:class => "btn btn-custom-spin",:data => { disable_with: "Processing..."} %>
